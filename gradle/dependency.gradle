@@ -6,6 +6,8 @@ repositories {
 dependencies {
     compile('org.springframework.boot:spring-boot-starter-web')
     testCompile('org.springframework.boot:spring-boot-starter-test')
+
+    cucumberRuntime "info.cukes:cucumber-java:1.2.5"
 }
 
 //dependencies {
@@ -28,5 +30,5 @@ dependencies {
 //            "org.assertj:assertj-core:3.6.1",
 //    )
 //
-//    cucumberRuntime "info.cukes:cucumber-java:1.2.5"
+//
 //}
