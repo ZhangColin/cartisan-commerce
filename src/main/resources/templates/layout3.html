@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cartisan | Commerce</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+    <!-- Add local styles, mostly for plugins css file -->
+
+
+    <!-- Add jQuery Style direct - used for jQGrid plugin -->
+    <link href="/scripts/plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Primary Inspinia style -->
+    <link href="/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="/css/animate.css" rel="stylesheet" type="text/css" />
+    <link href="/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body class="fixed-sidebar no-skin-config full-height-layout">
+
+<!-- Wrapper-->
+<!-- PageClass give you ability to specify custom style for specific view based on action -->
+<div id="wrapper" class="@Html.PageClass()">
+
+    <!-- Navigation -->
+    {{>navigation}}
+
+    <!-- Page wraper -->
+    <div id="page-wrapper" class="gray-bg @ViewBag.SpecialClass">
+
+        <!-- Top Navbar -->
+        {{>topNavbar1}}
+
+        <!-- Main view  -->
+        {{>content}}
+
+        <!-- Footer -->
+        {{>footer}}
+
+    </div>
+    <!-- End page wrapper-->
+
+    <!-- Right Sidebar -->
+    {{>rightSidebar}}
+
+</div>
+<!-- End wrapper-->
+
+<!-- Section for main scripts render -->
+<script type="text/javascript" src="/scripts/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="/scripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="/scripts/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script type="text/javascript" src="/scripts/plugins/metisMenu/metisMenu.min.js"></script>
+<script type="text/javascript" src="/scripts/plugins/pace/pace.min.js"></script>
+<script type="text/javascript" src="/scripts/app/inspinia.js"></script>
+
+<!-- Skin config script - only for demo purpose-->
+<!--<script type="text/javascript" src="/scripts/app/skin.config.min.js"></script>-->
+
+<!-- Handler for local scripts -->
+</body>
+</html>
