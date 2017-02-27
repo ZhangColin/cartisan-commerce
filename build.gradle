@@ -1,7 +1,7 @@
 buildscript {
     ext {
 //        springBootVersion = '1.5.1.RELEASE'
-        springBootVersion = '1.4.1.RELEASE'
+        springBootVersion = '1.4.3.RELEASE'
     }
     repositories {
         mavenCentral()
@@ -15,6 +15,7 @@ plugins {
     id "java"
     id "com.github.samueltbrown.cucumber" version "0.9"
     id "idea"
+    id "jacoco"
 }
 
 //apply plugin: "org.springframework.boot"
@@ -30,28 +31,5 @@ sourceCompatibility = 1.8
 apply from: "gradle/dependency.gradle"
 apply from: "gradle/common.gradle"
 apply from: "gradle/run.gradle"
-
-
-
-cucumber {
-    if (project.hasProperty('tag')) {
-        tags = ["@" + "$tag"]
-    }
-    jvmOptions {
-        environment 'SPRING_PROFILES_ACTIVE', 'test'
-        if (project.hasProperty('port')) {
-            environment 'SERVER_PORT', "$port"
-        }
-    }
-}
-
-bootRun {
-    environment 'SPRING_PROFILES_ACTIVE', 'dev'
-    if (project.hasProperty('port')) {
-        environment 'SERVER_PORT', "$port"
-    }
-}
-
-test {
-    environment 'SPRING_PROFILES_ACTIVE', 'test'
-}
+apply from: "gradle/ci.gradle"
+apply from: "gradle/sonar.gradle"

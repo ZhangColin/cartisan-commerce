@@ -7,7 +7,11 @@ before_install:
 install:
   - pip install ansible
 
+addons:
+  sonarqube: true
+
 script:
   - ansible-playbook cartisan_commerce.yml --inventory-file=host_travis_ci.txt --syntax-check
   - ansible-playbook cartisan_commerce.yml --inventory-file=host_travis_ci.txt
-  - bash -lec "gradle clean check cucumber"
+  - bash -lec "gradle sonar"
+  - bash -lec "sonar-scanner"
