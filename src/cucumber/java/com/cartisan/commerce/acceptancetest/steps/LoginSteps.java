@@ -22,7 +22,7 @@ public class LoginSteps {
 
     @当("^使用用户名\"([^\"]*)\"与密码\"([^\"]*)\"进行登录$")
     public void 使用用户名_与密码_进行登录(String name, String password) throws Throwable {
-        webDriver.get("http://localhost:8080/signin");
+        webDriver.get("http://localhost:8090/signin");
         WebElement username = webDriver.findElement(By.name("username"));
         username.sendKeys(name);
         WebElement pass = webDriver.findElement(By.name("password"));
