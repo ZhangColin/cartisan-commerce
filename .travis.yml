@@ -1,0 +1,13 @@
+language: python
+python: "2.7"
+
+before_install:
+  - sudo apt-get update -qq
+
+install:
+  - pip install ansible
+
+script:
+  - ansible-playbook modern.yml --inventory-file=host_travis_ci.txt --syntax-check
+  - ansible-playbook modern.yml --inventory-file=host_travis_ci.txt
+  - bash -lec "gradle clean check cucumber"
