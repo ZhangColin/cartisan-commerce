@@ -7,7 +7,7 @@
     - gradle
     - role: mysql
       mysql:
-        database: cartisan_commerce
+        database: cartisan_commerce_test
         user: cartisan
         password: pa$$w0rD
     - firefox
