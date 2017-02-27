@@ -180,7 +180,7 @@ hs_err_pid*
 
 # Ansible
 /*.retry
-/hosts.txt-example
+/hosts.txt
 
 # Sonar
 .sonar

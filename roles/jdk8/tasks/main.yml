@@ -20,6 +20,6 @@
       copy:
         dest: "{{ jdk8.profile }}"
         content:
-          export JAVA_HOME = "/usr/lib/jvm/java-8-oracle"
-          export PATH="$JAVA_HOME/bin:$PATH"
-  when: ansible_os_family == "Debian"
+          export JAVA_HOME = '/usr/lib/jvm/java-8-oracle'
+          export PATH = '$JAVA_HOME/bin:$PATH'
+  when: ansible_os_family == 'Debian'
