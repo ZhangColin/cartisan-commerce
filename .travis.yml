@@ -8,6 +8,6 @@ install:
   - pip install ansible
 
 script:
-  - ansible-playbook modern.yml --inventory-file=host_travis_ci.txt --syntax-check
-  - ansible-playbook modern.yml --inventory-file=host_travis_ci.txt
+  - ansible-playbook cartisan_commerce.yml --inventory-file=host_travis_ci.txt --syntax-check
+  - ansible-playbook cartisan_commerce.yml --inventory-file=host_travis_ci.txt
   - bash -lec "gradle clean check cucumber"
