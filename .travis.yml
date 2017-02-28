@@ -8,7 +8,11 @@ install:
   - pip install ansible
 
 addons:
-  sonarqube: true
+  sonarqube:
+    branches:
+      - master
+      - develop
+#  sonarqube: true
 
 script:
   - ansible-playbook cartisan_commerce.yml --inventory-file=host_travis_ci.txt --syntax-check
