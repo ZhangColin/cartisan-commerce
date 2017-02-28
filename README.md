@@ -1,13 +1,13 @@
 [![Build Status](https://travis-ci.org/ZhangColin/cartisan-commerce.svg?branch=develop)](https://travis-ci.org/ZhangColin/cartisan-commerce) 
-[![Quality Gate](https://sonarqube.com/api/badges/gate?key=Cartisan:commerce)](https://sonarqube.com/dashboard?id=Cartisan%3Acommerce) 
-[![Issues](https://img.shields.io/sonar/http/sonarqube.com/Cartisan:commerce/violations.svg)](https://sonarqube.com/component_issues/index?id=Cartisan%3Acommerce#resolved=false)
+[![Quality Gate](https://sonarqube.com/api/badges/gate?key=Cartisan:commerce:develop)](https://sonarqube.com/dashboard?id=Cartisan%3Acommerce%3Adevelop) 
+[![Issues](https://img.shields.io/sonar/http/sonarqube.com/Cartisan:commerce:develop/violations.svg)](https://sonarqube.com/component_issues/index?id=Cartisan%3Acommerce%3Adevelop#resolved=false)
 
-[![Overall Coverage](https://img.shields.io/sonar/http/sonarqube.com/Cartisan:commerce/overall_coverage.svg)](https://sonarqube.com/component_measures/domain/Coverage?id=Cartisan%3Acommerce) 
-[![UT Coverage](https://img.shields.io/sonar/http/sonarqube.com/Cartisan:commerce/coverage.svg)](https://sonarqube.com/component_measures/domain/Coverage?id=Cartisan%3Acommerce) 
-[![Function Complexity](https://img.shields.io/sonar/http/sonarqube.com/Cartisan:commerce/function_complexity.svg)](https://sonarqube.com/component_measures/domain/Complexity?id=Cartisan%3Acommerce) 
-[![Class Complexity](https://img.shields.io/sonar/http/sonarqube.com/Cartisan:commerce/class_complexity.svg)](https://sonarqube.com/component_measures/domain/Complexity?id=Cartisan%3Acommerce) 
-[![Duplications](https://img.shields.io/sonar/http/sonarqube.com/Cartisan:commerce/duplicated_blocks.svg)](https://sonarqube.com/component_measures/domain/Duplications?id=Cartisan%3Acommerce) 
-[![Code Smells](https://img.shields.io/sonar/http/sonarqube.com/Cartisan:commerce/code_smells.svg)](https://sonarqube.com/component_measures/domain/Maintainability?id=Cartisan%3Acommerce)
+[![Overall Coverage](https://img.shields.io/sonar/http/sonarqube.com/Cartisan:commerce:develop/overall_coverage.svg)](https://sonarqube.com/component_measures/domain/Coverage?id=Cartisan%3Acommerce%3Adevelop) 
+[![UT Coverage](https://img.shields.io/sonar/http/sonarqube.com/Cartisan:commerce:develop/coverage.svg)](https://sonarqube.com/component_measures/domain/Coverage?id=Cartisan%3Acommerce%3Adevelop) 
+[![Function Complexity](https://img.shields.io/sonar/http/sonarqube.com/Cartisan:commerce:develop/function_complexity.svg)](https://sonarqube.com/component_measures/domain/Complexity?id=Cartisan%3Acommerce%3Adevelop) 
+[![Class Complexity](https://img.shields.io/sonar/http/sonarqube.com/Cartisan:commerce:develop/class_complexity.svg)](https://sonarqube.com/component_measures/domain/Complexity?id=Cartisan%3Acommerce%3Adevelop) 
+[![Duplications](https://img.shields.io/sonar/http/sonarqube.com/Cartisan:commerce:develop/duplicated_blocks.svg)](https://sonarqube.com/component_measures/domain/Duplications?id=Cartisan%3Acommerce%3Adevelop) 
+[![Code Smells](https://img.shields.io/sonar/http/sonarqube.com/Cartisan:commerce:develop/code_smells.svg)](https://sonarqube.com/component_measures/domain/Maintainability?id=Cartisan%3Acommerce%3Adevelop)
 
 
 # 安装
