@@ -11,12 +11,4 @@ public class HomeController {
     public String index() {
         return "/home";
     }
-
-
-    @GetMapping("/throwError")
-    public String throwError() throws Exception {
-        throw new Exception("error");
-    }
-
-
 }
