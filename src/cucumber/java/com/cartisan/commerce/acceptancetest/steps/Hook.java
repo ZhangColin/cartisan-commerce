@@ -19,4 +19,6 @@ public class Hook {
     public void restoreApplicationConfiguration() {
         applicationConfigurations.restore();
     }
+
+
 }
