@@ -1,9 +1,12 @@
 package com.cartisan.commerce.account.controller;
 
+import com.cartisan.commerce.account.service.AccountInfo;
 import com.cartisan.commerce.account.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -25,5 +28,12 @@ public class AccountController {
         modelAndView.addObject("accounts",accountService.getAccounts());
 
         return modelAndView;
+    }
+
+    @PostMapping("/save")
+    public ModelAndView save(@ModelAttribute AccountInfo accountInfo) {
+        accountService.save(accountInfo);
+
+        return index();
     }
 }

@@ -45,7 +45,7 @@
             </div>
             <div class="col-lg-2">
                 <div class="title-action">
-                    <a href="" class="btn btn-primary"  data-toggle="modal" data-target="#myModal">添加</a>
+                    <a href="" id="btnAdd" class="btn btn-primary"  data-toggle="modal" data-target="#myModal">添加</a>
                 </div>
             </div>
         </div>
@@ -163,13 +163,13 @@
                         <!--<h4 class="modal-title">编辑</h4>-->
                     <!--</div>-->
                     <div class="modal-body">
-                        <form class="form-horizontal">
+                        <form class="form-horizontal" id="accountForm" action="/account/save" method="post">
                             <p>Sign in today for more expirience.</p>
                             <div class="form-group">
                                 <label class="col-lg-2 control-label">Email</label>
 
                                 <div class="col-lg-10">
-                                    <input type="email" placeholder="Email" class="form-control"> <span class="help-block m-b-none">Example block-level help text here.</span>
+                                    <input type="email" placeholder="Email" id="email" name="email" class="form-control"> <span class="help-block m-b-none">Example block-level help text here.</span>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -177,16 +177,11 @@
 
                                 <div class="col-lg-10"><input type="password" placeholder="Password" class="form-control"></div>
                             </div>
-                            <div class="form-group">
-                                <div class="col-lg-offset-2 col-lg-10">
-                                    <div class="checkbox i-checks"><label> <input type="checkbox"><i></i> Remember me </label></div>
-                                </div>
-                            </div>
                         </form>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-white" data-dismiss="modal">取消</button>
-                        <button type="button" class="btn btn-primary">保存</button>
+                        <button type="button" class="btn btn-primary" id="btnSave">保存</button>
                     </div>
                 </div>
             </div>
@@ -238,8 +233,9 @@
 
         });
 
-
-
+        $('#btnSave').on('click', function() {
+            $('#accountForm').submit();
+        })
     });
 </script>
 </body>

@@ -1,5 +1,6 @@
 package com.cartisan.commerce.account.service;
 
+import com.cartisan.commerce.account.domain.Account;
 import com.cartisan.commerce.account.repository.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,5 +26,12 @@ public class AccountService {
         });
 
         return accounts;
+    }
+
+    public void save(AccountInfo accountInfo) {
+        Account account = new Account();
+        account.setEmail(accountInfo.getEmail());
+
+        repository.save(account);
     }
 }

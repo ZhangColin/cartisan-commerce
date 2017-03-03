@@ -9,4 +9,6 @@ import java.util.List;
 @Transactional
 public interface AccountRepository extends Repository<Account, Long> {
     List<Account> findAll();
+
+    void save(Account account);
 }
