@@ -37,13 +37,11 @@ public class AccountSteps {
     public void 看到一条email为_的账户记录(String email) throws Throwable {
         assertThat(webDriver.findElement(By.tagName("body")).getText()).contains(email);
 
-        accountRepositoryForTest.deleteAll();
         webDriver.close();
     }
 
     @假如("^系统一个账户都不存在$")
     public void 系统一个账户都不存在() throws Throwable {
-        accountRepositoryForTest.deleteAll();
     }
 
     @那么("^提示\"([^\"]*)\"$")
@@ -67,7 +65,6 @@ public class AccountSteps {
     public void 成功创建账户_Email为(String email) throws Throwable {
         assertThat(webDriver.findElement(By.tagName("body")).getText()).contains(email);
 
-        accountRepositoryForTest.deleteAll();
         webDriver.close();
     }
 

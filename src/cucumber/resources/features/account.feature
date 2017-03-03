@@ -1,5 +1,5 @@
 # language: zh-CN
-
+@account
 功能: 账户管理
 
   @wip
