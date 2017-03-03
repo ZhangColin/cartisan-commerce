@@ -13,12 +13,18 @@ import org.springframework.test.context.junit4.SpringRunner;
 @ContextConfiguration(classes = Application.class)
 public class Runner {
     @Autowired
-    ApplicationConfigurations applicationConfigurations;
+    private ApplicationConfigurations applicationConfigurations;
 
-        @After("@restoreApplicationConfiguration")
+    @Autowired
+    private SeleniumWebDriver webDriver;
+
+    @After("@restoreApplicationConfiguration")
     public void restoreApplicationConfiguration() {
         applicationConfigurations.restore();
     }
 
-
+    @After
+    public void closeWebBrowser() {
+        webDriver.close();
+    }
 }
