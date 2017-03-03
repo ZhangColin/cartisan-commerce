@@ -2,6 +2,10 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/cartisan_commerce_dev?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC
 
+  devtools:
+    restart:
+      exclude: templates/**
+
 server:
   port: 8090
 
