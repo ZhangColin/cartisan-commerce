@@ -1,6 +1,7 @@
 package com.cartisan.commerce.acceptancetest.steps;
 
 import com.cartisan.commerce.Application;
+import com.cartisan.commerce.acceptancetest.driver.UiDriver;
 import cucumber.api.java.After;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package com.cartisan.commerce.acceptancetest.steps;
+package com.cartisan.commerce.acceptancetest.driver;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
