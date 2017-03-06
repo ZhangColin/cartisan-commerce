@@ -2,20 +2,19 @@ package com.cartisan.commerce.acceptancetest.driver;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class SeleniumWebDriver implements UiDriver {
     private final WebDriver webDriver = new FirefoxDriver();
 
     @Override
-    public WebElement findElementByTag(String tagName) {
-        return webDriver.findElement(By.tagName(tagName));
+    public UiElement findElementByTag(String tagName) {
+        return new SeleniumWebElement(webDriver.findElement(By.tagName(tagName)));
     }
 
     @Override
-    public WebElement findElementById(String elementId) {
-        return webDriver.findElement(By.id(elementId));
+    public UiElement findElementById(String elementId) {
+        return new SeleniumWebElement(webDriver.findElement(By.id(elementId)));
     }
 
     @Override

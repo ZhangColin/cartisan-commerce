@@ -1,6 +1,5 @@
 package com.cartisan.commerce.acceptancetest.driver;
 
-import org.openqa.selenium.WebElement;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
@@ -17,12 +16,12 @@ public class UiDriverWithHostName implements UiDriver {
     private final UiDriver originalDriver = new SeleniumWebDriver();
 
     @Override
-    public WebElement findElementByTag(String tagName) {
+    public UiElement findElementByTag(String tagName) {
         return originalDriver.findElementByTag(tagName);
     }
 
     @Override
-    public WebElement findElementById(String elementId) {
+    public UiElement findElementById(String elementId) {
         return originalDriver.findElementById(elementId);
     }
 
