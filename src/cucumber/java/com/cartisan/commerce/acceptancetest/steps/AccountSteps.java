@@ -13,7 +13,7 @@ public class AccountSteps {
     private AccountRepositoryForTest accountRepositoryForTest;
 
     @Autowired
-    private SeleniumWebDriver uiDriver;
+    private UiDriver uiDriver;
 
     @假如("^系统存在一个账户，Email为\"([^\"]*)\"$")
     public void 系统存在一个账户_Email为(String email) throws Throwable {
@@ -24,7 +24,7 @@ public class AccountSteps {
 
     @当("^查看账户列表$")
     public void 查看账户时() throws Throwable {
-        uiDriver.navigateTo("http://localhost:8080/account/index");
+        uiDriver.navigateTo("/account/index");
     }
 
     @那么("^看到一条Email为\"([^\"]*)\"的账户记录$")
@@ -43,7 +43,7 @@ public class AccountSteps {
 
     @当("^添加一个账户，Email为\"([^\"]*)\"$")
     public void 添加一个账户_Email为(String email) throws Throwable {
-        uiDriver.navigateTo("http://localhost:8080/account/index");
+        uiDriver.navigateTo("/account/index");
         uiDriver.findElementById("btnAdd").click();
 
         Thread.sleep(1000);

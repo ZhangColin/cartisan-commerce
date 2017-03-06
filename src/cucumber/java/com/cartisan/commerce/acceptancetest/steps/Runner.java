@@ -16,7 +16,7 @@ public class Runner {
     private ApplicationConfigurations applicationConfigurations;
 
     @Autowired
-    private SeleniumWebDriver webDriver;
+    private UiDriver uiDriver;
 
     @After("@restoreApplicationConfiguration")
     public void restoreApplicationConfiguration() {
@@ -25,6 +25,6 @@ public class Runner {
 
     @After
     public void closeWebBrowser() {
-        webDriver.close();
+        uiDriver.close();
     }
 }
