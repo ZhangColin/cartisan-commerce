@@ -1,4 +1,4 @@
-package com.cartisan.commerce.acceptancetest.steps;
+package com.cartisan.commerce.acceptancetest.hooks;
 
 import com.cartisan.commerce.acceptancetest.data.account.AccountRepositoryForTest;
 import cucumber.api.java.After;

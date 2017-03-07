@@ -58,6 +58,4 @@ public class AccountSteps {
         assertThat(uiDriver.findElementByTag("body").getText()).contains(email);
     }
 
-
-
 }
