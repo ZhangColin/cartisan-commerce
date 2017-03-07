@@ -12,7 +12,6 @@
     当 查看账户列表
     那么 提示"No data available in table"
 
-    @wip
   场景: 成功创建账户
     假如 系统一个账户都不存在
     当 添加一个账户，Email为"stwyhm@126.com"

@@ -6,4 +6,6 @@ public interface UiElement {
     void click();
 
     String getText();
+
+    void submit();
 }

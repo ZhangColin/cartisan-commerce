@@ -5,6 +5,8 @@ public interface UiDriver {
 
     UiElement findElementById(String elementId);
 
+    UiElement findElementByName(String name);
+
     void close();
 
     void navigateTo(String url);

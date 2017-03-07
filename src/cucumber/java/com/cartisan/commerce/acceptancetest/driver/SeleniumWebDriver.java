@@ -18,6 +18,11 @@ public class SeleniumWebDriver implements UiDriver {
     }
 
     @Override
+    public UiElement findElementByName(String elementName) {
+        return new SeleniumWebElement(webDriver.findElement(By.name(elementName)));
+    }
+
+    @Override
     public void close() {
         webDriver.close();
     }

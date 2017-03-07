@@ -26,6 +26,11 @@ public class UiDriverWithHostName implements UiDriver {
     }
 
     @Override
+    public UiElement findElementByName(String elementName) {
+        return originalDriver.findElementByName(elementName);
+    }
+
+    @Override
     public void close() {
         originalDriver.close();
     }
