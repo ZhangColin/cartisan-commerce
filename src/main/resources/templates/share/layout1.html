@@ -1,48 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-    {{>metas}}
+    {{>/share/metas}}
 
     <title>Cartisan | Commerce</title>
 
-    {{>css}}
+    {{>/share/css}}
 
 </head>
 <body>
 
 <!-- Skin configuration box -->
-<!--{{>skinConfig}}-->
+<!--{{>/share/skinConfig}}-->
 
 <!-- Wrapper-->
 <!-- PageClass give you ability to specify custom style for specific view based on action -->
 <div id="wrapper" class="{{pageClass}}">
 
     <!-- Navigation -->
-    {{>navigation}}
+    {{>/share/navigation}}
 
     <!-- Page wraper -->
     <div id="page-wrapper" class="gray-bg {{specialClass}}">
 
         <!-- Top Navbar -->
-        {{>topNavbar1}}
+        {{>/share/topNavbar1}}
 
         <!-- Main view  -->
         {{>content}}
 
         <!-- Footer -->
-        {{>footer}}
+        {{>/share/footer}}
 
     </div>
     <!-- End page wrapper-->
 
     <!-- Right Sidebar -->
-    {{>rightSidebar}}
+    {{>/share/rightSidebar}}
 
 </div>
 <!-- End wrapper-->
 
 <!-- Section for main scripts render -->
-{{>scripts}}
+{{>/share/scripts}}
 
 <!-- Handler for local scripts -->
 </body>

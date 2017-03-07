@@ -7,6 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Cartisan | Commerce</title>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+    <!-- Add local styles, mostly for plugins css file -->
+
+
     <!-- Add jQuery Style direct - used for jQGrid plugin -->
     <link href="/scripts/plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css" />
 
@@ -16,29 +19,32 @@
     <link href="/css/style.css" rel="stylesheet" type="text/css" />
     <link href="/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 </head>
-<body class="top-navigation">
-
-<!-- Skin configuration box -->
-<!--{{>skinConfig}}-->
+<body class="canvas-menu">
 
 <!-- Wrapper-->
 <!-- PageClass give you ability to specify custom style for specific view based on action -->
 <div id="wrapper" class="@Html.PageClass()">
 
+    <!-- Navigation -->
+    {{>/share/navigationOffCanvas}}
+
     <!-- Page wraper -->
     <div id="page-wrapper" class="gray-bg @ViewBag.SpecialClass">
 
         <!-- Top Navbar -->
-        {{>topNavbar2}}
+        {{>/share/topNavbar1}}
 
         <!-- Main view  -->
         {{>content}}
 
         <!-- Footer -->
-        {{>footer}}
+        {{>/share/footer}}
 
     </div>
     <!-- End page wrapper-->
+
+    <!-- Right Sidebar -->
+    {{>/share/rightSidebar}}
 
 </div>
 <!-- End wrapper-->
@@ -55,5 +61,13 @@
 <!--<script type="text/javascript" src="/scripts/app/skin.config.min.js"></script>-->
 
 <!-- Handler for local scripts -->
+
+<script>
+    $('body.canvas-menu .sidebar-collapse').slimScroll({
+        height: '100%',
+        railOpacity: 0.9
+    });
+</script>
+
 </body>
 </html>
