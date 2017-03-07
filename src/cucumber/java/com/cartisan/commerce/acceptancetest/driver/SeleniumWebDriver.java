@@ -4,8 +4,15 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import java.util.concurrent.TimeUnit;
+
 public class SeleniumWebDriver implements UiDriver {
+    private static final int DEFAULT_TIME_OUT_IN_SECONDS = 10;
     private final WebDriver webDriver = new FirefoxDriver();
+
+    public SeleniumWebDriver() {
+        webDriver.manage().timeouts().implicitlyWait(DEFAULT_TIME_OUT_IN_SECONDS, TimeUnit.SECONDS);
+    }
 
     @Override
     public UiElement findElementByTag(String tagName) {
