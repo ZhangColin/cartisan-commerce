@@ -1,5 +1,6 @@
 package com.cartisan.commerce.acceptancetest.steps;
 
+import com.cartisan.commerce.acceptancetest.data.account.AccountRepositoryForTest;
 import com.cartisan.commerce.acceptancetest.driver.UiDriver;
 import com.cartisan.commerce.account.domain.Account;
 import cucumber.api.java.zh_cn.假如;

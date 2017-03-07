@@ -1,4 +1,4 @@
-package com.cartisan.commerce.acceptancetest.steps;
+package com.cartisan.commerce.acceptancetest.data.account;
 
 import com.cartisan.commerce.account.domain.Account;
 import org.springframework.data.repository.Repository;
