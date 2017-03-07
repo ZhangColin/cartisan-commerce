@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+import static com.cartisan.commerce.common.controller.Urls.ACCOUNTS_INDEX;
+
 @Component
 @Scope("cucumber-glue")
 public class AccountPage {
@@ -13,11 +15,11 @@ public class AccountPage {
     private UiDriver uiDriver;
 
     public void show() {
-        uiDriver.navigateTo("/account/index");
+        uiDriver.navigateTo(ACCOUNTS_INDEX);
     }
 
     public void add(EditableAccount account) {
-        uiDriver.navigateTo("/account/index");
+        show();
         uiDriver.findElementById("btnAdd").click();
 
         uiDriver.findElementById("email").sendKeys(account.getEmail());

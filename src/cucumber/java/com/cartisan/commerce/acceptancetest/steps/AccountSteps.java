@@ -50,14 +50,19 @@ public class AccountSteps {
 
     @当("^添加一个账户，Email为\"([^\"]*)\"$")
     public void 添加一个账户_Email为(String email) throws Throwable {
-        EditableAccount account = new EditableAccount();
-        account.setEmail(email);
+        EditableAccount account = editableAccount(email);
         accountPage.add(account);
     }
 
     @那么("^成功创建账户，Email为\"([^\"]*)\"$")
     public void 成功创建账户_Email为(String email) throws Throwable {
         assertThat(commonPage.getAllText()).contains(email);
+    }
+
+    private EditableAccount editableAccount(String email) {
+        EditableAccount account = new EditableAccount();
+        account.setEmail(email);
+        return account;
     }
 
 }

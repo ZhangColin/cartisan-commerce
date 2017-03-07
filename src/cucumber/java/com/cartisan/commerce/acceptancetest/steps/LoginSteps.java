@@ -11,6 +11,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import static com.cartisan.commerce.common.controller.Urls.SIGNIN;
+
 public class LoginSteps {
     @Autowired
     private UiDriver uiDriver;
@@ -22,7 +24,7 @@ public class LoginSteps {
 
     @当("^使用用户名\"([^\"]*)\"与密码\"([^\"]*)\"进行登录$")
     public void 使用用户名_与密码_进行登录(String name, String password) throws Throwable {
-        uiDriver.navigateTo("/signin");
+        uiDriver.navigateTo(SIGNIN);
         UiElement username = uiDriver.findElementByName("username");
         username.sendKeys(name);
         UiElement pass = uiDriver.findElementByName("password");

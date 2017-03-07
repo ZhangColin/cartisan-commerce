@@ -11,7 +11,6 @@ import org.springframework.stereotype.Component;
 public class CustomServletContainer implements EmbeddedServletContainerCustomizer {
     @Override
     public void customize(ConfigurableEmbeddedServletContainer container) {
-//        container.addErrorPages(new ErrorPage(HttpStatus.NOT_FOUND, "/templates/notFoundError.html"));
         container.addErrorPages(new ErrorPage(HttpStatus.NOT_FOUND, "/common/404"));
     }
 }

@@ -10,8 +10,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import static com.cartisan.commerce.common.controller.Urls.*;
+
 @Controller
-@RequestMapping("/account")
+@RequestMapping(ACCOUNTS)
 public class AccountController {
 
     private final AccountService accountService;
@@ -21,16 +23,16 @@ public class AccountController {
         this.accountService = accountService;
     }
 
-    @GetMapping("/index")
+    @GetMapping(INDEX)
     public ModelAndView index() {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("/account/index");
+        modelAndView.setViewName(ACCOUNTS_INDEX);
         modelAndView.addObject("accounts",accountService.getAccounts());
 
         return modelAndView;
     }
 
-    @PostMapping("/save")
+    @PostMapping(SAVE)
     public ModelAndView save(@ModelAttribute AccountInfo accountInfo) {
         accountService.save(accountInfo);
 
