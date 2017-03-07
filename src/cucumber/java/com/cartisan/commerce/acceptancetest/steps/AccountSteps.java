@@ -2,6 +2,8 @@ package com.cartisan.commerce.acceptancetest.steps;
 
 import com.cartisan.commerce.acceptancetest.data.account.AccountRepositoryForTest;
 import com.cartisan.commerce.acceptancetest.driver.UiDriver;
+import com.cartisan.commerce.acceptancetest.pages.AccountPage;
+import com.cartisan.commerce.acceptancetest.pages.CommonPage;
 import com.cartisan.commerce.account.domain.Account;
 import cucumber.api.java.zh_cn.假如;
 import cucumber.api.java.zh_cn.当;
@@ -15,6 +17,12 @@ public class AccountSteps {
     private AccountRepositoryForTest accountRepositoryForTest;
 
     @Autowired
+    private AccountPage accountPage;
+
+    @Autowired
+    private CommonPage commonPage;
+
+    @Autowired
     private UiDriver uiDriver;
 
     @假如("^系统存在一个账户，Email为\"([^\"]*)\"$")
@@ -26,7 +34,7 @@ public class AccountSteps {
 
     @当("^查看账户列表$")
     public void 查看账户时() throws Throwable {
-        uiDriver.navigateTo("/account/index");
+        accountPage.show();
     }
 
     @那么("^看到一条Email为\"([^\"]*)\"的账户记录$")
@@ -40,7 +48,7 @@ public class AccountSteps {
 
     @那么("^提示\"([^\"]*)\"$")
     public void 页面提示(String msg) throws Throwable {
-        assertThat(uiDriver.findElementByTag("body").getText()).contains(msg);
+        assertThat(commonPage.getAllText()).contains(msg);
     }
 
     @当("^添加一个账户，Email为\"([^\"]*)\"$")
