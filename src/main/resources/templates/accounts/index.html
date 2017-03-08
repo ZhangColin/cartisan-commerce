@@ -204,12 +204,12 @@
 
 <!-- Handler for local scripts -->
 <script type="text/javascript" src="/scripts/plugins/dataTables/datatables.min.js"></script>
-<script type="text/javascript" src="/scripts/plugins/dataTables/datatables.min.js"></script>
 
 <script type="text/javascript">
     $(document).ready(function () {
 
         $('.dataTables-example').DataTable({
+            language: {url:'/scripts/plugins/dataTables/chinese.json'},
             pageLength: 25,
             dom: '<"html5buttons"B>lTfgitp',
             buttons: [

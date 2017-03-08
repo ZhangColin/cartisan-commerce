@@ -11,7 +11,7 @@ import static com.cartisan.commerce.common.controller.Urls.ROOT;
 @RequestMapping(ROOT)
 public class HomeController {
     @GetMapping
-    public String index() throws Exception {
+    public String index() {
         return HOME;
     }
 }

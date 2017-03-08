@@ -17,16 +17,16 @@ public class HomeControllerTest {
         mockMvc.perform(get("/")).andExpect(view().name("/home"));
     }
 
-//    @Test
-//    public void indexUnitTest() {
-//        // Arrange
-//        HomeController controller = new HomeController();
-//
-//        // Act
-//        String viewName = controller.index();
-//
-//        // Assert
-//        assertThat(viewName).isEqualTo("/home");
-//    }
+    @Test
+    public void indexUnitTest() {
+        // Arrange
+        HomeController controller = new HomeController();
+
+        // Act
+        String viewName = controller.index();
+
+        // Assert
+        assertThat(viewName).isEqualTo("/home");
+    }
 
 }
