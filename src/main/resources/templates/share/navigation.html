@@ -26,26 +26,31 @@
                 </div>
             </li>
             {{#menu.items}}
-            <li class="{{activeClass}}">
-            <a href="{{url}}"><i class="fa {{icon}}"></i> <span class="nav-label">{{name}}</span></a>
+            <li class="{{#active}}active{{/active}}">
+                <a href="{{url}}"><i class="fa {{icon}}"></i> <span class="nav-label">{{name}}</span>
                 {{#subMenuItems.size}}
-                <ul class="nav nav-second-level collapse in)">
+                    <span class="fa arrow"></span>
+                    {{/subMenuItems.size}}
+                </a>
+                {{#subMenuItems.size}}
+
+                <ul class="nav nav-second-level collapse {{#active}}in{{/active}}">
                     {{#subMenuItems}}
-                <li class="{{activeClass}}"><a href="{{url}}">{{name}}</a></li>
+                    <li class="{{#active}}active{{/active}}"><a href="{{url}}">{{name}}</a></li>
                     {{/subMenuItems}}
                 </ul>
                 {{/subMenuItems.size}}
             </li>
             {{/menu.items}}
             <!--<li class="active">-->
-                <!--<a href="{{rootUrl}}"><i class="fa fa-th-large"></i> <span class="nav-label">控制台{{isActiveRootUrl}}</span></a>-->
+            <!--<a href="{{rootUrl}}"><i class="fa fa-th-large"></i> <span class="nav-label">控制台{{isActiveRootUrl}}</span></a>-->
             <!--</li>-->
             <!--<li>-->
-                <!--<a href="#"><i class="fa fa-diamond"></i> <span class="nav-label">用户</span>-->
-                    <!--<span class="fa arrow"></span>-->
-                <!--<ul class="nav nav-second-level collapse in)">-->
-                    <!--<li><a href="{{accountsUrl}}">用户管理</a></li>-->
-                <!--</ul>-->
+            <!--<a href="#"><i class="fa fa-diamond"></i> <span class="nav-label">用户</span>-->
+            <!--<span class="fa arrow"></span>-->
+            <!--<ul class="nav nav-second-level collapse in)">-->
+            <!--<li><a href="{{accountsUrl}}">用户管理</a></li>-->
+            <!--</ul>-->
             <!--</li>-->
 
         </ul>

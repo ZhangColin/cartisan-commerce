@@ -15,7 +15,7 @@ public class MenuItem {
     private String url;
     private String name;
     private String icon;
-    private String activeClass;
+    private boolean active;
 
     private List<MenuItem> subMenuItems;
 }

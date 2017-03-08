@@ -20,20 +20,34 @@ public class Menu {
     public Menu() {
         items = new ArrayList<>();
 
-        items.add(new MenuItem(ROOT, "控制台", "", "", null));
+        items.add(new MenuItem(ROOT, "控制台", "fa-th-large", false, null));
 
         List<MenuItem> subItems = new ArrayList<>();
-        subItems.add(new MenuItem(ACCOUNTS_INDEX, "用户管理", "", "", null));
+        subItems.add(new MenuItem(ACCOUNTS_INDEX, "用户管理", "", false, null));
+        subItems.add(new MenuItem("#", "角色管理", "", false, null));
 
-        items.add(new MenuItem("#", "用户", "", "", subItems));
+        items.add(new MenuItem("#", "用户", "fa-users", false, subItems));
     }
 
-    public void setActiveClass(String servletPath) {
-        for (MenuItem item : items) {
+    public void setActive(String servletPath) {
+        processActive(servletPath, items);
+    }
+
+    private boolean processActive(String servletPath, List<MenuItem> menuItems) {
+        for (MenuItem item : menuItems) {
             if (item.getUrl().equals(servletPath)) {
-                item.setActiveClass("active");
-                break;
+                item.setActive(true);
+                return true;
+            }
+            else if (item.getSubMenuItems()!=null){
+                if (processActive(servletPath, item.getSubMenuItems())){
+                    item.setActive(true);
+                    return true;
+                }
             }
         }
+        return false;
     }
+
+
 }
