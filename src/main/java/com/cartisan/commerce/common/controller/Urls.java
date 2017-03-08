@@ -14,7 +14,7 @@ public class Urls {
     public static final String ROOT = "/";
 
     public static final String COMMON = "/common";
-    public static final String NOTFOUND = "/404";
-    public static final String INTERNALSERVERERROR = "/500";
+    public static final String NOTFOUND = COMMON + "/404";
+    public static final String INTERNALSERVERERROR = COMMON + "/500";
 
 }

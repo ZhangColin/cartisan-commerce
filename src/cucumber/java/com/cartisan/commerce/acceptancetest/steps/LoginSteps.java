@@ -5,10 +5,6 @@ import com.cartisan.commerce.acceptancetest.driver.UiElement;
 import cucumber.api.java.zh_cn.假如;
 import cucumber.api.java.zh_cn.当;
 import cucumber.api.java.zh_cn.那么;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import static com.cartisan.commerce.common.controller.Urls.SIGNIN;
