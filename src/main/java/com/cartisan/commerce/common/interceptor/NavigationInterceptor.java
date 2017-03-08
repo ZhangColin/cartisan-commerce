@@ -1,5 +1,7 @@
 package com.cartisan.commerce.common.interceptor;
 
+import com.cartisan.commerce.common.view.Menu;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -10,6 +12,9 @@ import static com.cartisan.commerce.common.controller.Urls.ACCOUNTS_INDEX;
 import static com.cartisan.commerce.common.controller.Urls.ROOT;
 
 public class NavigationInterceptor implements HandlerInterceptor {
+//    @Autowired
+//    private Menu menu;
+
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         return true;
@@ -21,8 +26,14 @@ public class NavigationInterceptor implements HandlerInterceptor {
             return;
         }
 
-        modelAndView.addObject("rootUrl", ROOT);
-        modelAndView.addObject("accountsUrl", ACCOUNTS_INDEX);
+        Menu menu = new Menu();
+        menu.setActiveClass(request.getServletPath());
+
+        modelAndView.addObject("menu", menu);
+//        modelAndView.addObject("rootUrl", ROOT);
+//        modelAndView.addObject("isActiveRootUrl", request.getServletPath());
+//
+//        modelAndView.addObject("accountsUrl", ACCOUNTS_INDEX);
     }
 
     @Override

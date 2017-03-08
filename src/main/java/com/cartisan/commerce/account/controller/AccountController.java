@@ -2,7 +2,7 @@ package com.cartisan.commerce.account.controller;
 
 import com.cartisan.commerce.account.service.AccountInfo;
 import com.cartisan.commerce.account.service.AccountService;
-import com.cartisan.commerce.account.view.PresentableAccount;
+import com.cartisan.commerce.account.view.PresentableAccounts;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,7 +26,7 @@ public class AccountController {
 
     @GetMapping(INDEX)
     public ModelAndView index() {
-        return new PresentableAccount(accountService.getAccounts());
+        return new PresentableAccounts(accountService.getAccounts());
     }
 
     @PostMapping(SAVE)
