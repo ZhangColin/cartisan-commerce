@@ -57,30 +57,11 @@
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="form-group">
-                            <label class="control-label" for="product_name">Product Name</label>
-                            <input type="text" id="product_name" name="product_name" value="" placeholder="Product Name" class="form-control">
+                            <input type="text" id="product_name" name="product_name" value="" placeholder="邮箱" class="form-control">
                         </div>
                     </div>
-                    <div class="col-sm-2">
-                        <div class="form-group">
-                            <label class="control-label" for="price">Price</label>
-                            <input type="text" id="price" name="price" value="" placeholder="Price" class="form-control">
-                        </div>
-                    </div>
-                    <div class="col-sm-2">
-                        <div class="form-group">
-                            <label class="control-label" for="quantity">Quantity</label>
-                            <input type="text" id="quantity" name="quantity" value="" placeholder="Quantity" class="form-control">
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="form-group">
-                            <label class="control-label" for="status">Status</label>
-                            <select name="status" id="status" class="form-control">
-                                <option value="1" selected>Enabled</option>
-                                <option value="0">Disabled</option>
-                            </select>
-                        </div>
+                    <div class="col-sm-8">
+                        <a href="" id="btnSearch" class="btn btn-primary pull-right">查询</a>
                     </div>
                 </div>
 
@@ -137,15 +118,6 @@
                                 </tr>
                                 {{/accounts}}
                                 </tbody>
-                                <tfoot>
-                                <tr>
-                                    <th>Rendering engine</th>
-                                    <th>Browser</th>
-                                    <th>Platform(s)</th>
-                                    <th>Engine version</th>
-                                    <th>CSS grade</th>
-                                </tr>
-                                </tfoot>
                             </table>
 
                         </div>
@@ -210,26 +182,27 @@
 
         $('.dataTables-example').DataTable({
             language: {url:'/scripts/plugins/dataTables/chinese.json'},
-            pageLength: 25,
-            dom: '<"html5buttons"B>lTfgitp',
-            buttons: [
-                { extend: 'copy' },
-                { extend: 'csv' },
-                { extend: 'excel', title: 'ExampleFile' },
-                { extend: 'pdf', title: 'ExampleFile' },
-
-                {
-                    extend: 'print',
-                    customize: function (win) {
-                        $(win.document.body).addClass('white-bg');
-                        $(win.document.body).css('font-size', '10px');
-
-                        $(win.document.body).find('table')
-                            .addClass('compact')
-                            .css('font-size', 'inherit');
-                    }
-                }
-            ]
+            pageLength: 10,
+            pagingType: 'full_numbers',
+            dom: "lft<'row'<'col-sm-4'i><'col-sm-8'p>>",
+//            buttons: [
+//                { extend: 'copy' },
+//                { extend: 'csv' },
+//                { extend: 'excel', title: 'ExampleFile' },
+//                { extend: 'pdf', title: 'ExampleFile' },
+//
+//                {
+//                    extend: 'print',
+//                    customize: function (win) {
+//                        $(win.document.body).addClass('white-bg');
+//                        $(win.document.body).css('font-size', '10px');
+//
+//                        $(win.document.body).find('table')
+//                            .addClass('compact')
+//                            .css('font-size', 'inherit');
+//                    }
+//                }
+//            ]
 
         });
 
