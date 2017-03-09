@@ -9,6 +9,7 @@ dependencies {
             "org.springframework.boot:spring-boot-starter-data-jpa",
             "org.springframework.boot:spring-boot-starter-data-cache",
             "org.springframework.boot:spring-boot-starter-data-mongodb",
+            "org.springframework.boot:spring-boot-starter-data-redis",
             "org.springframework.boot:spring-boot-starter-redis",
             "org.springframework.boot:spring-boot-devtools",
             "mysql:mysql-connector-java:6.0.5",
