@@ -20,3 +20,14 @@ spring:
 
 application:
     perPageLimit: 10
+
+logging:
+  level:
+    #ROOT: DEBUG
+    org.springframework.web: ERROR
+    com.cartisan: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  file: ./logs//cartisan-commerce.log
+
