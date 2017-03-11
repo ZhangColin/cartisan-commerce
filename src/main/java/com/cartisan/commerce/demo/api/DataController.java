@@ -1,10 +1,10 @@
 package com.cartisan.commerce.home.api;
 
-import com.cartisan.commerce.home.domain.Customer;
-import com.cartisan.commerce.home.domain.Location;
-import com.cartisan.commerce.home.domain.Person;
-import com.cartisan.commerce.home.repository.CustomerRepository;
-import com.cartisan.commerce.home.repository.PersonRepository;
+import com.cartisan.commerce.demo.domain.Customer;
+import com.cartisan.commerce.demo.domain.Location;
+import com.cartisan.commerce.demo.domain.Person;
+import com.cartisan.commerce.demo.repository.CustomerRepository;
+import com.cartisan.commerce.demo.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

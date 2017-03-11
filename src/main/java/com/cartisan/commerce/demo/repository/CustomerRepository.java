@@ -1,6 +1,6 @@
-package com.cartisan.commerce.home.repository;
+package com.cartisan.commerce.demo.repository;
 
-import com.cartisan.commerce.home.domain.Customer;
+import com.cartisan.commerce.demo.domain.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;

@@ -1,6 +1,6 @@
 package com.cartisan.commerce.home.api;
 
-import com.cartisan.commerce.home.service.CacheDemoService;
+import com.cartisan.commerce.demo.service.CacheDemoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -1,6 +1,6 @@
-package com.cartisan.commerce.home.repository;
+package com.cartisan.commerce.demo.repository;
 
-import com.cartisan.commerce.home.domain.Person;
+import com.cartisan.commerce.demo.domain.Person;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 

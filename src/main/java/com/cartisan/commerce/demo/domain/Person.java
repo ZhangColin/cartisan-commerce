@@ -1,4 +1,4 @@
-package com.cartisan.commerce.home.domain;
+package com.cartisan.commerce.demo.domain;
 
 import lombok.Data;
 import org.springframework.data.mongodb.core.mapping.Document;
