@@ -4,6 +4,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpSession;
+
+import java.util.UUID;
+
 import static com.cartisan.commerce.common.controller.Urls.HOME;
 import static com.cartisan.commerce.common.controller.Urls.ROOT;
 
@@ -14,4 +18,6 @@ public class HomeController {
     public String index() {
         return HOME;
     }
+
+
 }
