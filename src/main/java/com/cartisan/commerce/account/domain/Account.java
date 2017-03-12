@@ -21,5 +21,15 @@ public class Account {
     private Long id;
 
     @NotNull
+    private String userName;
+
+    @NotNull
+    private String password;
+
+    @NotNull
     private String email;
+
+    private String nickName;
+
+
 }
