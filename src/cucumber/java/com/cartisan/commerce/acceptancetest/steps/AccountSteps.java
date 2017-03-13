@@ -26,6 +26,9 @@ public class AccountSteps {
     public void 系统存在一个账户_Email为(String email) throws Throwable {
         Account account = new Account();
         account.setEmail(email);
+        account.setUserName("colin");
+        account.setPassword("colinPassword");
+        account.setNickName("文野");
         accountRepositoryForTest.save(account);
     }
 

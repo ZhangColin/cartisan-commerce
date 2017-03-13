@@ -1,5 +1,6 @@
-package com.cartisan.commerce;
+package com.cartisan.commerce.demo.redis;
 
+import com.cartisan.commerce.Application;
 import com.cartisan.commerce.account.domain.Account;
 import org.junit.Assert;
 import org.junit.Test;
@@ -11,12 +12,13 @@ import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.concurrent.TimeUnit;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@RunWith(SpringJUnit4ClassRunner.class)
+@RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 @ContextConfiguration(classes = Application.class)
 public class RedisTest {

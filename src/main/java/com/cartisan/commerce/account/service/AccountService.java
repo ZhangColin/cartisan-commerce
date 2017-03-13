@@ -31,6 +31,9 @@ public class AccountService {
     public void save(AccountInfo accountInfo) {
         Account account = new Account();
         account.setEmail(accountInfo.getEmail());
+        account.setUserName("colin");
+        account.setPassword("colinPassword");
+        account.setNickName("文野");
 
         repository.save(account);
     }
