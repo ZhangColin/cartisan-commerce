@@ -15,6 +15,11 @@ spring:
     messages:
         basename: BindingErrorMessages
 
+#    rabbitmq:
+#        host: localhost
+#        port: 5672
+#        username:
+#        password:
 #    cache:
 #      type: simple
 #    redis:
@@ -29,11 +34,6 @@ spring:
 #        min-idle: 0     # 连接池中的最小空闲连接
 #      timeout: 0        # 连接超时时间（毫秒）
 
-#  rabbitmq:
-#    host: localhost
-#    port: 5672
-#    username:
-#    password:
 
 application:
     perPageLimit: 10

@@ -1,4 +1,4 @@
-package com.cartisan.commerce.demo.amqp;
+package com.cartisan.commerce.demo.rabbitmq;
 
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
@@ -14,7 +14,15 @@ public class TopicRabbitConfig {
 
     @Bean
     public Queue queueMessage() {
-        return new Queue(TopicRabbitConfig.message);
+//        // 是否持久化
+//        boolean durable = false;
+//        // 仅创建者可以使用的私有队列，断开后自动删除
+//        boolean exclusive = false;
+//        // 当所有消费客户端连接断开后，是否自动删除队列
+//        boolean autoDelete = false;
+//        Queue queue = new Queue(TopicRabbitConfig.message, durable, exclusive, autoDelete);
+        Queue queue = new Queue(TopicRabbitConfig.message);
+        return queue;
     }
 
     @Bean
