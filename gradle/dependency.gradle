@@ -20,7 +20,9 @@ dependencies {
             "mysql:mysql-connector-java:6.0.5",
             "org.hibernate:hibernate-validator:5.4.0.Final",
             "com.github.mjeanroy:springmvc-mustache:0.5.3",
-            "org.projectlombok:lombok:1.16.12"
+            "org.projectlombok:lombok:1.16.12",
+            "io.springfox:springfox-swagger2:2.6.1",
+            "io.springfox:springfox-swagger-ui:2.6.1"
     )
 
     testCompile("org.springframework.boot:spring-boot-starter-test",
