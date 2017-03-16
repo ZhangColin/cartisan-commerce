@@ -1,6 +1,6 @@
 package com.cartisan.commerce.common.config;
 
-import com.cartisan.commerce.common.filter.PrintRequestUrlFilter;
+import com.cartisan.commerce.demo.filter.PrintRequestUrlFilter;
 import org.apache.catalina.filters.RemoteIpFilter;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;

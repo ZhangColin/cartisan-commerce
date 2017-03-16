@@ -1,4 +1,4 @@
-package com.cartisan.commerce.common.filter;
+package com.cartisan.commerce.demo.filter;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
