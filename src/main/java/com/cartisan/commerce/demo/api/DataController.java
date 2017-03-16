@@ -1,4 +1,4 @@
-package com.cartisan.commerce.home.api;
+package com.cartisan.commerce.demo.api;
 
 import com.cartisan.commerce.demo.domain.Customer;
 import com.cartisan.commerce.demo.domain.Location;

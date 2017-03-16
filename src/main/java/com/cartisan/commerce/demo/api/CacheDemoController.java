@@ -1,4 +1,4 @@
-package com.cartisan.commerce.home.api;
+package com.cartisan.commerce.demo.api;
 
 import com.cartisan.commerce.demo.service.CacheDemoService;
 import org.springframework.beans.factory.annotation.Autowired;
