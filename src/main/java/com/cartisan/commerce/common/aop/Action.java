@@ -1,4 +1,4 @@
-package com.cartisan.commerce.demo.aop;
+package com.cartisan.commerce.common.aop;
 
 import java.lang.annotation.*;
 

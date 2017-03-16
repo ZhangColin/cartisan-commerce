@@ -11,12 +11,8 @@ public class AopController {
     @Autowired
     AnnotationService annotationService;
 
-    @Autowired
-    MethodService methodService;
-
     @GetMapping("/")
     public void test() {
         annotationService.add();
-        methodService.add();
     }
 }
