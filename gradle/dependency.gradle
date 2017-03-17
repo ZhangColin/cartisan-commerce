@@ -16,8 +16,7 @@ dependencies {
             "org.springframework.boot:spring-boot-starter-data-redis",
             "org.springframework.boot:spring-boot-starter-aop",
             "org.springframework.boot:spring-boot-starter-amqp",
-            //"org.springframework.boot:spring-boot-starter-mail",
-//            "org.springframework.boot:spring-boot-starter-log4j2",
+            "org.springframework.boot:spring-boot-starter-mail",
             "org.springframework.boot:spring-boot-starter-log4j2",
             "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.8.7", // 加上这个才能辨认到log4j2.yml文件
             "org.apache.logging.log4j:log4j-nosql:2.8.1", // 必需，否则报错
